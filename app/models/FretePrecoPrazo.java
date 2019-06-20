@@ -2,7 +2,7 @@ package models;
 
 import javax.persistence.Entity;
 
-@Entity
+//@Entity 
 public class FretePrecoPrazo {
 	
 	public String preco;
