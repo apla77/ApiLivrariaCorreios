@@ -5,7 +5,7 @@
 # Home page
 GET 	/                                     Application.index
 
-GET     /calculoFrete/{cepDestino}/{peso}/{comprimento}/{altura}/{largura}/{valorDeclarado}  ApiLivrariaCorreios.calculoFrete
+GET     /{cepDestino}/{peso}/{comprimento}/{altura}/{largura}/{valorDeclarado}  ApiLivrariaCorreios.calculoFrete
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
