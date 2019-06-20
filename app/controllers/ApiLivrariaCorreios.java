@@ -29,9 +29,7 @@ public class ApiLivrariaCorreios extends Controller{
 		String tagP = "<PrazoDeEntrega>";
 		String prazo = getTagValue(xml, tagP);
 		
-		FretePrecoPrazo fretePrecoPrazo = new FretePrecoPrazo();
-		fretePrecoPrazo.setPreco(preco);
-		fretePrecoPrazo.setPrazo(prazo);
+		FretePrecoPrazo fretePrecoPrazo = new FretePrecoPrazo(preco, prazo);
 		
 		Gson gson = new Gson();
         
@@ -40,7 +38,7 @@ public class ApiLivrariaCorreios extends Controller{
         renderText(json);		
 		
 	}
-	
+	 
 
 	public static String getTagValue(String xml, String tag) {
 	    String closeTag = new StringBuffer(tag).insert(1, "/").toString();
